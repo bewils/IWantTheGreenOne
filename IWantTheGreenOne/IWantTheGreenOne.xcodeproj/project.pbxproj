@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C42BBA811DA88AF600D011E4 /* WinScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42BBA801DA88AF600D011E4 /* WinScene.swift */; };
+		C42BBA831DA8941B00D011E4 /* Ball.swift in Sources */ = {isa = PBXBuildFile; fileRef = C42BBA821DA8941B00D011E4 /* Ball.swift */; };
+		C42BBA851DA8C68300D011E4 /* WinScene.sks in Resources */ = {isa = PBXBuildFile; fileRef = C42BBA841DA8C68300D011E4 /* WinScene.sks */; };
 		C4D4A3261DA7837C002A3C45 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D4A3251DA7837C002A3C45 /* AppDelegate.swift */; };
 		C4D4A32A1DA7837C002A3C45 /* Actions.sks in Resources */ = {isa = PBXBuildFile; fileRef = C4D4A3291DA7837C002A3C45 /* Actions.sks */; };
 		C4D4A32C1DA7837C002A3C45 /* GameScene.swift in Sources */ = {isa = PBXBuildFile; fileRef = C4D4A32B1DA7837C002A3C45 /* GameScene.swift */; };
@@ -17,6 +20,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		C42BBA801DA88AF600D011E4 /* WinScene.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WinScene.swift; sourceTree = "<group>"; };
+		C42BBA821DA8941B00D011E4 /* Ball.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ball.swift; sourceTree = "<group>"; };
+		C42BBA841DA8C68300D011E4 /* WinScene.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = WinScene.sks; sourceTree = "<group>"; };
 		C4D4A3221DA7837C002A3C45 /* IWantTheGreenOne.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IWantTheGreenOne.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C4D4A3251DA7837C002A3C45 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C4D4A3291DA7837C002A3C45 /* Actions.sks */ = {isa = PBXFileReference; lastKnownFileType = file.sks; path = Actions.sks; sourceTree = "<group>"; };
@@ -60,7 +66,10 @@
 			children = (
 				C4D4A3251DA7837C002A3C45 /* AppDelegate.swift */,
 				C4D4A3291DA7837C002A3C45 /* Actions.sks */,
+				C42BBA841DA8C68300D011E4 /* WinScene.sks */,
+				C42BBA821DA8941B00D011E4 /* Ball.swift */,
 				C4D4A32B1DA7837C002A3C45 /* GameScene.swift */,
+				C42BBA801DA88AF600D011E4 /* WinScene.swift */,
 				C4D4A32D1DA7837C002A3C45 /* GameViewController.swift */,
 				C4D4A32F1DA7837C002A3C45 /* Main.storyboard */,
 				C4D4A3321DA7837C002A3C45 /* Assets.xcassets */,
@@ -130,6 +139,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C42BBA851DA8C68300D011E4 /* WinScene.sks in Resources */,
 				C4D4A3311DA7837C002A3C45 /* Main.storyboard in Resources */,
 				C4D4A3331DA7837C002A3C45 /* Assets.xcassets in Resources */,
 				C4D4A3361DA7837C002A3C45 /* LaunchScreen.storyboard in Resources */,
@@ -145,6 +155,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				C4D4A32C1DA7837C002A3C45 /* GameScene.swift in Sources */,
+				C42BBA811DA88AF600D011E4 /* WinScene.swift in Sources */,
+				C42BBA831DA8941B00D011E4 /* Ball.swift in Sources */,
 				C4D4A32E1DA7837C002A3C45 /* GameViewController.swift in Sources */,
 				C4D4A3261DA7837C002A3C45 /* AppDelegate.swift in Sources */,
 			);
