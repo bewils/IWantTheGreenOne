@@ -16,26 +16,29 @@ class GameViewController: UIViewController, UIAccelerometerDelegate {
     private var motionManager = CMMotionManager()
     private var speedX: UIAccelerationValue = 0
     private var speedY: UIAccelerationValue = 0
+    private var gameScene: GameScene?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         if let skView = self.view as! SKView? {
-            let gameScene = GameScene(size: self.view.frame.size)
-            gameScene.scaleMode = .aspectFill
+            gameScene = GameScene(size: self.view.frame.size)
+            gameScene?.scaleMode = .aspectFill
             
             skView.ignoresSiblingOrder = true
             skView.showsFPS = true
             skView.showsNodeCount = true
             skView.presentScene(gameScene)
-        }
-        
-        motionManager.accelerometerUpdateInterval = 1 / 60
-        if motionManager.isAccelerometerAvailable {
-            let queue = OperationQueue.current
-            motionManager.startAccelerometerUpdates(to: queue!, withHandler: { (data, error) -> Void in
-                print(data)
-            })
+            
+            motionManager.accelerometerUpdateInterval = 1 / 60
+            if motionManager.isAccelerometerAvailable {
+                let queue = OperationQueue.current
+                motionManager.startAccelerometerUpdates(to: queue!, withHandler: { [weak self] (accelerData, error) -> Void in
+                    if let data = accelerData {
+                        self?.gameScene?.actualGravity = CGVector(dx: data.acceleration.y * 9.8, dy: data.acceleration.x * 9.8 * -2)
+                    }
+                })
+            }
         }
     }
     
